@@ -1,0 +1,72 @@
+/* auth.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9d3c8; /* Fond clair marron */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px; /* Augmente l'espace sous le titre */
+}
+
+h1 {
+    color: #4e3b31; /* Marron foncé */
+    margin: 0; /* Supprime le margin par défaut */
+}
+
+form {
+    background: #fff; /* Fond blanc pour le formulaire */
+    padding: 30px; /* Augmente le padding pour une carte plus grande */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 450px; /* Augmente la largeur de la carte */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px; /* Espace pour l'icône à gauche */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
+label {
+    margin-bottom: 5px;
+    color: #4e3b31;
+}
+
+
+input:focus {
+    border-color: #4e3b31; /* Bordure marron foncé au focus */
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4e3b31; /* Bouton marron foncé */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3c2a24; /* Couleur plus foncée au survol */
+}
+h1{
+    text-align: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}

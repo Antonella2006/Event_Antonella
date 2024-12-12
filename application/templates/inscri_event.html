@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion d'Événements</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/liste_event.css' %}">
+    <link rel="stylesheet" href="{% static 'css/liste_inscri.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion d'Événements</h1>
+        <img src="{% static 'images/logo.jpeg' %}" alt="Logo" class="logo">
+        
+        <nav>
+            <a href="{% url 'home' %}"><i class="fas fa-home"></i> Accueil</a>
+            <a href="{% url 'inscri_event' %}"><i class="fas fa-user-plus"></i> Inscription à des événements</a>
+            <a href="{% url 'notifications' %}"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="{% url 'about' %}"><i class="fas fa-info-circle"></i> À Propos</a>
+        </nav>
+    </header>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+                <th>Lieu</th>
+                <th>Capacité</th>
+                <th>Inscription</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for evenement in evenements %}
+            <tr>
+                <td>{{ evenement.titre }}</td>
+                <td>{{ evenement.description }}</td>
+                <td>{{ evenement.date_debut }}</td>
+                <td>{{ evenement.date_fin }}</td>
+                <td>{{ evenement.lieu }}</td>
+                <td>{{ evenement.capacite }}</td>
+                <td>
+                    <form method="post" action="{% url 'inscrire_evenement' evenement.id %}" class="inscri">
+                        {% csrf_token %}
+                        <button type="submit"><i class="fas fa-sign-in-alt"></i>S'inscrire</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="center-container">
+        <form action="{% url 'deconnexion' %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="connect">Se Déconnecter</button>
+        </form>
+    </div>
+</body>
+</html>

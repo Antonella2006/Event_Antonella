@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de notre site</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="../../static/images/logo.jpeg" alt="Logo" class="logo"> 
+        <h1>Gestion d'Événements</h1>
+        <nav>
+            <a href="{% url 'home' %}"><i class="fas fa-home"></i> Accueil</a>
+            <a href="{% url 'inscri_event' %}"><i class="fas fa-user-plus"></i> Inscription à des événements</a>
+             <a href="{% url 'notifications' %}"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="{% url 'about' %}"><i class="fas fa-info-circle"></i> À Propos</a>
+           
+        </nav>
+    </header>
+    
+    <section class="content">
+        <h2>À propos de notre site de gestion d'événements</h2>
+        <h2>Notre Mission</h2>
+        <p>
+            Nous sommes dédiés à simplifier l'organisation d'événements pour tous. Que ce soit pour des conférences, des mariages
+            ou des festivals, notre plateforme vous offre tous les outils nécessaires pour gérer votre événement de manière efficace.
+        </p>
+        
+        <h2>Pourquoi nous choisir ?</h2>
+        <p>
+            Avec une interface conviviale et des fonctionnalités avancées, nous vous aidons à planifier, promouvoir et exécuter
+            vos événements sans stress. Notre équipe est là pour vous accompagner à chaque étape.
+        </p>
+    </section>
+
+    <footer>
+        <h1>Contactez-nous</h1>
+        <div class="contact">
+            
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>Téléphone : 038 24 569 14</p>
+            </div>
+            <a href="">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>Email : examenagiles@gmail.com</p>
+            </div>
+        </a>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Adresse : Analakely, près de Super U</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

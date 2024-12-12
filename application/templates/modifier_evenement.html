@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/modifier_event.css' %}">
+    <title>Modifier un Événement</title>
+</head>
+<body>
+    <h1>Modifier l'Événement: {{ evenement.titre }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Affiche le formulaire -->
+        <button type="submit">Modifier</button>
+    </form>
+
+    <a href="{% url 'liste_evenements' %}">Retour à la liste des événements</a>
+</body>
+</html>

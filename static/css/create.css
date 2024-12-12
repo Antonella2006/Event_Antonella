@@ -1,0 +1,91 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Fond clair pour le contenu */
+            margin: 0;
+            padding: 20px; /* Espacement autour du contenu */
+        }
+
+        form {
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            max-width: 600px; 
+            margin: 20px auto; 
+        }
+        .text{
+            color:black;
+        }
+        h1 {
+            color: #4e3b31; /* Couleur du texte du titre du formulaire */
+            text-align: center; /* Centrer le titre */
+            margin-bottom: 20px; /* Espace sous le titre */
+        }
+
+        .input-group {
+            margin-bottom: 20px; /* Espace entre les champs */
+            position: relative; /* Nécessaire pour positionner les icônes */
+        }
+
+        .label {
+            display: block; /* Affichage en bloc pour les labels */
+            margin-bottom: 5px; /* Espace sous le label */
+            color: #4e3b31; /* Couleur des labels */
+        }
+
+        input {
+            width: 100%; /* Prend toute la largeur */
+            padding: 10px; /* Espace intérieur */
+            border: 1px solid #ccc; /* Bordure grise */
+            border-radius: 5px; /* Coins arrondis */
+            font-size: 16px; /* Taille de police */
+            box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+        }
+
+        .date-group {
+            display: flex; /* Utilise le flexbox pour aligner les éléments */
+            justify-content: space-between; /* Espace entre les éléments */
+            margin-bottom: 20px; /* Espace sous le groupe de dates */
+        }
+
+        .input-group {
+            flex: 1; /* Permet aux champs de prendre une largeur égale */
+            margin-right: 10px; /* Espace entre les champs */
+        }
+
+        .input-group:last-child {
+            margin-right: 0; /* Supprime l'espace après le dernier champ */
+        }
+
+        button {
+            width: 100%; /* Prend toute la largeur */
+            padding: 10px; /* Espace intérieur */
+            background-color: #4e3b31; /* Couleur du bouton */
+            color: white; /* Couleur du texte */
+            border: none; /* Pas de bordure */
+            border-radius: 5px; /* Coins arrondis */
+            cursor: pointer; /* Curseur de pointeur */
+            font-size: 16px; /* Taille de police */
+        }
+
+        button:hover {
+            background-color: #3c2a24; /* Couleur plus foncée au survol */
+        }
+
+        .messages p {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .messages p.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .messages p.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        

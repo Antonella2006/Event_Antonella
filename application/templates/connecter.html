@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter</title>
+    <link rel="stylesheet" href="{% static 'css/co.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Bienvenue sur notre plateforme de gestion d'événements</h1>
+            <p>Veuillez choisir comment vous souhaitez vous connecter :</p>
+        </div>
+        
+        <div class="options">
+            <a href="{% url 'login_participant' %}" class="button participant">Connexion en tant que Participant</a>
+            <a href="{% url 'authentification_organisateur' %}" class="button organisateur">Connexion en tant qu'Organisateur</a>
+        </div>
+    </div>
+</body>
+</html>

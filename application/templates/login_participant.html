@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login_pa.css' %}">
+    <title>Connexion Participant</title>
+</head>
+<body>
+    <h1>Connexion Participant</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Se connecter</button>
+        <p>Pas encore de compte ?</p>
+        <a href="{% url 'create_participant' %}">
+            <button type="button" class="create-account-btn">Créer un compte</button>
+        </a>
+    </form>
+
+   
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* Augmenter la largeur maximale du formulaire */
+            margin: auto;
+        }
+        
+        .form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px; /* Augmenter le padding pour rendre les champs plus hauts */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Facultatif : pour augmenter la taille du texte à l'intérieur */
+}
+
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        button {
+            background: #7b7f83;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
